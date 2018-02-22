@@ -1,4 +1,4 @@
-const mamaData = [
+const basicRestaurantData = [
   {
     id: 101,
     title: 'Mario\'s Magnificent Pasta',
@@ -701,5 +701,4 @@ const mamaData = [
   },
 ];
 
-module.exports = mamaData;
-
+module.exports = basicRestaurantData;

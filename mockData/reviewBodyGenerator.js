@@ -26,9 +26,9 @@ const reviewBodyGenerator = (foodType, restaurantName, reviewStars) => {
   const serverNames = ['Tina', 'Anthony', 'Alex', 'Tiffany', 'Stephanie', 'Lauren', 'Tony', 'Jake', 'Timothy', 'Anna', 'Wayne'];
 
   const dishes = dishesByFoodType[foodType];
-  const dishOne = dishes(getRandomIndex(dishes));
-  const dishTwo = dishes(getRandomIndex(dishes));
-  const serverName = serverNames(getRandomIndex(serverNames));
+  const dishOne = dishes[getRandomIndex(dishes)];
+  const dishTwo = dishes[getRandomIndex(dishes)];
+  const serverName = serverNames[getRandomIndex(serverNames)];
 
   const reviews = {
     positive: [
@@ -38,7 +38,7 @@ const reviewBodyGenerator = (foodType, restaurantName, reviewStars) => {
       `My partner and I always go here! It's hands-down the best place to go for ${foodType} in the whole city.`,
       `OMG I srsly wish I could eat ${dishOne} every day it is sooooooooooo good!`,
       `The minute you walk in the door at ${restaurantName}, you are hit with the amazing smells coming out of the kitchen. I promise, if you weren't hungry before, you WILL be then. Take my word for it and try the ${dishOne}. It's simply divine.`,
-      `The host ${serverName} went across the street to get my daughter some crayons! Can you believe that? Anyone who treats my family that way will always get my business.`,
+      `The host, ${serverName} went across the street to get my daughter some crayons! Can you believe that? Anyone who treats my family that way will always get my business.`,
       'I consider myself a foodie and like to think I would have made an excellent restaurant critic if I\'d never gone to Hack Reactor. That said, I can think of nothing negative to say about this place. Everything exceeded my very high expectations. 5 stars.',
       `I can't believe I'd never heard of this place until this past week. Either way, I know about it now and it can become my new favorite place for ${foodType} cuisine.`,
       'This place is an absolute gem! I love coming here because the atmosphere of the place is relaxing and the coffee is great! The staff are INCREDIBELY kind. Always a wonderful experience!',
@@ -80,7 +80,7 @@ const reviewBodyGenerator = (foodType, restaurantName, reviewStars) => {
   }
 
   const possibleReviews = reviews[reviewRating];
-  return possibleReviews(getRandomIndex(possibleReviews));
+  return possibleReviews[getRandomIndex(possibleReviews)];
 };
 
 

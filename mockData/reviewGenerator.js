@@ -1,5 +1,5 @@
 const data = require('./reviewBodyGenerator.js');
-const users = require('./dummyUsers');
+const users = require('./mockUsers.js');
 
 // let reviewIdCounter = 1001;
 
@@ -23,6 +23,9 @@ const getRandomNumber = limit => (
 
 const generateReview = (restaurantObj, numStars, reviewDate) => {
   const curUser = users[getRandomNumber(users.length)];
+  if (numStars > 5 || numStars < 1) {
+    return undefined;
+  }
 
   const review = {
     restaurant: restaurantObj.id,
