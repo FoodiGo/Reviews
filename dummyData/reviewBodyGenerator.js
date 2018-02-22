@@ -69,7 +69,7 @@ const reviewBodyGenerator = (foodType, restaurantName, reviewStars) => {
     ],
   };
 
-  let reviewRating = null;
+  let reviewRating;
 
   if (reviewStars === 5) {
     reviewRating = 'positive';

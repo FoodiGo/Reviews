@@ -1,4 +1,4 @@
-const data = require('./reviewGeneratorData.js');
+const data = require('./reviewBodyGenerator.js');
 const users = require('./dummyUsers');
 
 // let reviewIdCounter = 1001;
