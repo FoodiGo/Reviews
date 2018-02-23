@@ -8,7 +8,7 @@ const getRandomNumber = limit => (
 const reviewRatings = {
   1: [
     [1, 1, 1],
-    [1, 1, 1, 2],
+    [1, 1, 1, 1],
   ],
   2: [
     [2, 2, 2],
@@ -33,7 +33,7 @@ const reviewRatings = {
   ],
   5: [
     [5, 5, 5],
-    [5, 5, 5, 4],
+    [5, 5, 5, 5],
   ],
 };
 
