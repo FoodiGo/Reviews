@@ -15,7 +15,7 @@ test('reviewGenerator returns a object that fits within the database schema', ()
   expect(typeof review.userPhoto).toBe('string');
   expect(typeof review.userLocation).toBe('string');
   expect(typeof review.rating).toBe('number');
-  expect(review.date).toBeInstanceOf(Date);
+  expect(typeof review.date).toBe('string');
   expect(typeof review.reviewBody).toBe('string');
   expect(typeof review.useful).toBe('number');
   expect(typeof review.funny).toBe('number');
