@@ -22,7 +22,7 @@ test('writeAllReviews should write 3-4 reviews for each restaurant', () => {
   expect(reviews.length).toBeGreaterThanOrEqual(3);
 });
 
-test('The ratings average to each restaurant\'s overall rating', () => {
+test('All of the review ratings average to each restaurant\'s overall rating', () => {
   testRestaurants[0].rating = 3;
   const reviews = writeAllReviews(testRestaurants);
 
