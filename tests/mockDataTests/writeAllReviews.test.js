@@ -15,7 +15,7 @@ test('writeAllReviews returns an array', () => {
   expect(Array.isArray(reviews)).toBe(true);
 });
 
-test('writeAllReviews should write 3-4 tests for each restaurant', () => {
+test('writeAllReviews should write 3-4 reviews for each restaurant', () => {
   testRestaurants[0].rating = 4;
   const reviews = writeAllReviews(testRestaurants);
 
