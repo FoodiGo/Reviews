@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "babel": "./node_modules/.bin/webpack -d --watch",
-    "start server": "nodemon server/serverIndex.js"
+    "start-server": "nodemon server/serverIndex.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "babel-preset-react": "^6.24.1",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "jquery": "^3.3.1",
     "mongoose": "^5.0.6",
     "npm": "^5.6.0",
     "react": "^16.2.0",
@@ -42,8 +43,10 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
     "fs": "0.0.1-security",
+    "http": "0.0.0",
     "jest": "^22.4.0",
     "nodemon": "^1.15.1",
-    "react-test-renderer": "^16.2.0"
+    "react-test-renderer": "^16.2.0",
+    "supertest": "^3.0.0"
   }
 }
