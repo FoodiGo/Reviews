@@ -1,6 +1,5 @@
 const generateReview = require('./reviewGenerator.js');
 const helpers = require('./reviewsHelperData.js');
-// const allRestaurants = require('./basicRestaurantData.js');
 
 const writeReviews = (restList) => {
   const allReviews = [];

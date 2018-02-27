@@ -2,5 +2,6 @@ client/bundle.js
 node_modules
 coverage
 .DS_Store
-npm-debug.log
 mockData/.DS_Store
+npm-debug.log
+.env

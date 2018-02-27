@@ -8,15 +8,13 @@ const generateReview = (restaurantObj, numStars, date) => {
     return undefined;
   }
 
-  const isoDate = new Date(date).toISOString();
-
   const review = {
     restaurant: restaurantObj.id,
     userName: curUser.name,
     userPhoto: curUser.photo,
     userLocation: curUser.location,
     rating: numStars,
-    date: isoDate,
+    date: new Date(date),
     reviewBody: data(restaurantObj.foodType, restaurantObj.title, numStars),
     useful: helpers.getRandomNumber(7),
     funny: helpers.getRandomNumber(7),
