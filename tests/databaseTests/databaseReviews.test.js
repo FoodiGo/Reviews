@@ -92,5 +92,3 @@ describe('database functions', () => {
     });
   });
 });
-
-mongoose.disconnect();
