@@ -1,11 +1,7 @@
-const mongoose = require('mongoose');
 const db = require('../../database/review.js');
 const seed = require('../../mockData/seedFunc.js');
 const writeReview = require('../../mockData/reviewGenerator.js');
 const allRestaurants = require('../../mockData/basicRestaurantData.js');
-require('dotenv').config();
-
-mongoose.connect(process.env.MONGOTEST);
 
 describe('seeder', () => {
   test('Seed function seeds database with mock reviews', (done) => {
