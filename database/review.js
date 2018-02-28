@@ -1,4 +1,7 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
+
+mongoose.connect(process.env[process.env.NODE_ENV]);
 
 const reviewSchema = mongoose.Schema({
   restaurant: Number,
