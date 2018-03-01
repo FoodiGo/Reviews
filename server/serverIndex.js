@@ -6,7 +6,7 @@ const app = express();
 
 app.use(parse.json());
 
-app.use(express.static(`${__dirname}/client`));
+app.use(express.static(`${__dirname}/../client`));
 
 app.use('/', router);
 
