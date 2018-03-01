@@ -5,6 +5,7 @@ var BUILD_DIR = path.resolve(__dirname, 'client');
 var APP_DIR = path.resolve(__dirname, 'client/components');
 
 var config = {
+  resolve: { extensions: ['.jsx', '.js'] },
   entry: APP_DIR + '/index.jsx',
   output: {
     path: BUILD_DIR,
