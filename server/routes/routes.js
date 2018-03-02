@@ -12,11 +12,12 @@ router.get('/restaurants/:restaurantId/reviews', (req, res) => {
 
 
 router.post('/restaurants/:restaurantId/reviews', (req, res) => {
-  if (!req.body.rating || !req.body.review) {
+  if (!req.body.rating || !req.body.review || !req.body.restaurant) {
     res.sendStatus(404);
   } else {
     const review = {
       restaurant: req.params.restaurantId,
+      restaurantName: req.body.restaurant,
       userName: req.body.user || 'anonymous',
       userPhoto: req.body.photo || '',
       userLocation: req.body.location || 'San Francisco, CA',

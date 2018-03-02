@@ -7,15 +7,16 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-
+      reviews: [], // array of review objects
+      restaurant: 'string',
     };
   }
 
   render() {
     return (
       <div>
-        <WriteReview id="write" />
-        <Reviews id="reviews" />
+        <WriteReview id="write" restaurant={this.state.restaurant} />
+        <Reviews id="reviews" reviews={this.state.reviews} />
       </div>
     );
   }

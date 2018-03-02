@@ -1,22 +1,17 @@
 import React from 'react';
+import propTypes from 'proptypes';
 import Review from './review';
 
-class Reviews extends React.Component {
-  constructor(props) {
-    super(props);
+const Reviews = props => (
+  <div>
+    {props.reviews.map(review => (
+      <Review review={review} />
+    ))}
+  </div>
+);
 
-    this.state = {
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        <Review className="reviews" />
-        <Review className="reviews" />
-      </div>
-    );
-  }
-}
+Reviews.propTypes = {
+  reviews: propTypes.arrayOf(propTypes.objects).isRequired,
+};
 
 export default Reviews;

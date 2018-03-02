@@ -10,6 +10,7 @@ const generateReview = (restaurantObj, numStars, date) => {
 
   const review = {
     restaurant: restaurantObj.id,
+    restaurantName: restaurantObj.title,
     userName: curUser.name,
     userPhoto: curUser.photo,
     userLocation: curUser.location,
