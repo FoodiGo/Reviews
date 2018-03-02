@@ -37,7 +37,9 @@ class App extends React.Component {
           restaurant={this.state.restaurant}
           restId={this.state.restId}
         />
-        <Reviews reviews={this.state.reviews} />
+        <Reviews
+          reviews={this.state.reviews}
+        />
       </div>
     );
   }

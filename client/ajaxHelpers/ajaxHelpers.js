@@ -13,18 +13,19 @@ const helpers = {
   post: (route, request, callback) => {
     $.post({
       url: route,
-      'content-type': 'application/json',
+      contentType: 'application/json',
       data: JSON.stringify(request),
-      success: (data) => {
-        callback(data);
+      success: () => {
+        callback();
       },
     });
   },
 
   put: (route, request) => {
-    $.put({
+    $.ajax({
       url: route,
-      'content-type': 'application/json',
+      method: 'PUT',
+      contentType: 'application/json',
       data: JSON.stringify(request),
     });
   },
