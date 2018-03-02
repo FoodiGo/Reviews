@@ -10,7 +10,7 @@ class App extends React.Component {
     this.state = {
       reviews: [],
       restaurant: 'string',
-      restId: 'number',
+      restId: 101,
     };
     this.setReviews = this.setReviews.bind(this);
   }
