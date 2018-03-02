@@ -6,7 +6,9 @@ describe('App container', () => {
   const app = mount(<App />);
 
   test('App container should be stateful', () => {
-    expect(app).toHaveProperty('state');
+    expect(app.state('reviews')).toBeDefined();
+    expect(app.state('restaurant')).toBeDefined();
+    expect(app.state('restId')).toBeDefined();
   });
 
   test('App container should render an instance of WriteReview container', () => {

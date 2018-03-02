@@ -12,8 +12,6 @@ router.get('/restaurants/:restaurantId/reviews', (req, res) => {
 
 
 router.post('/restaurants/:restaurantId/reviews', (req, res) => {
-  console.log('body', req.body);
-
   if (!req.body.rating || !req.body.review || !req.body.restaurant) {
     res.sendStatus(404);
   } else {
