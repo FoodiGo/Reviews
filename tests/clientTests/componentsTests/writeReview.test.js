@@ -6,7 +6,7 @@ describe('WriteReview container', () => {
   const write = mount(<WriteReview restaurant="Mary's" />);
 
   test('WriteReview container should render an instance of User', () => {
-    const users = write.find('#currentUser');
+    const users = write.find('.users');
     expect(users.length).toBe(1);
   });
 

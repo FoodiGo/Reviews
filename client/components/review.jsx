@@ -13,11 +13,13 @@ const Review = props => (
       userLocation={props.review.userLocation}
     />
     <div className="reviewData">
-      <div><Stars rating={props.review.rating} id={props.review['_id']} /></div>
-      <div>{moment(props.review.date).format('M/D/YYYY')}</div>
+      <div className="starsDateBox">
+        <div><Stars rating={props.review.rating} id={props.review['_id']} /></div>
+        <div className="date">{moment(props.review.date).format('M/D/YYYY')}</div>
+      </div>
       <div>{props.review.reviewBody}</div>
       <br />
-      <div>Was this review... ?</div>
+      <div className="buttonHeader">Was this review ...?</div>
       <Button
         id={props.review['_id']} // eslint-disable-line
         restaurant={props.review.restaurant}
