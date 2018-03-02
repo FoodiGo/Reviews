@@ -5,6 +5,7 @@ mongoose.connect(process.env[process.env.NODE_ENV]);
 
 const reviewSchema = mongoose.Schema({
   restaurant: Number,
+  restaurantName: String,
   userName: String,
   userPhoto: String,
   userLocation: String,

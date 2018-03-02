@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import Review from '../../../client/components/review';
+import Reviews from '../../../client/components/reviews';
 
 const reviews = [
   {
@@ -20,17 +20,12 @@ const reviews = [
   },
 ];
 
-describe('Review container', () => {
-  const review = mount(<Review review={reviews[0]} />);
+describe('Reviews container', () => {
+  const reviewsBox = mount(<Reviews reviews={reviews} />);
 
-  test('Review container should render an instance of User', () => {
-    const users = review.find('div.users');
-    expect(users.length).toBe(1);
-  });
-
-  test('Review container should render three instances of Button', () => {
-    const buttons = review.find('button');
-    expect(buttons.length).toBe(3);
+  test('Reviews container should render all reviews passed in', () => {
+    const allReviews = reviewsBox.find('.review');
+    expect(allReviews.length).toBe(1);
   });
 });
 

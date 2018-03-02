@@ -31,7 +31,7 @@ describe('ajax requests', () => {
   test('server responds to successful POST requests with a 201', (done) => {
     request(app)
       .post('/restaurants/001/reviews')
-      .send({ rating: 5, review: 'I loved it!' })
+      .send({ rating: 5, review: 'I loved it!', restaurant: 'Amy\'s Baking Company' })
       .set('Content-Type', 'application/json')
       .expect(201)
       .end(err => (

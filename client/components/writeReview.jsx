@@ -1,14 +1,21 @@
 import React from 'react';
+import propTypes from 'proptypes';
 import User from './user';
 
 const WriteReview = props => (
-  <div>
+  <div id="write">
     <User id="currentUser" />
-    <div>
+    <div >
       <div>Stars Display</div>
-      <div>Start Your Review of -Insert RestaurantName-</div>
+      <div>Start Your Review of
+        <span id="restName"> {props.restaurant}</span>
+      </div>
     </div>
   </div>
 );
+
+WriteReview.propTypes = {
+  restaurant: propTypes.string.isRequired,
+};
 
 export default WriteReview;
