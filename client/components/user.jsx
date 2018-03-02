@@ -2,7 +2,7 @@ import React from 'react';
 import propTypes from 'proptypes';
 
 const User = props => (
-  <div className="users">
+  <div className={props.addedClass !== '' ? `users ${props.addedClass}` : 'users'}>
     <div className="userFlex">
       <div className="userLeft">
         <img alt={props.userName} className="userPhotos" src={props.userPhoto} />
@@ -13,8 +13,11 @@ const User = props => (
       </div>
     </div>
     <div className="userActions">
-      <div>Share Review</div>
-      <div>Embed Review</div>
+      <div className="action">Share Review</div>
+      <div className="action">Embed Review</div>
+      <div className="action">Compliment</div>
+      <div className="action">Send Message</div>
+      <div className="action">Follow {props.userName}</div>
     </div>
   </div>
 );
@@ -23,12 +26,14 @@ User.propTypes = {
   userName: propTypes.string,
   userPhoto: propTypes.string,
   userLocation: propTypes.string,
+  addedClass: '',
 };
 
 User.defaultProps = {
   userName: '',
   userPhoto: 'https://s3-us-west-1.amazonaws.com/foodigouserphotos/DefaultUser.png',
   userLocation: '',
+  addedClass: '',
 };
 
 export default User;

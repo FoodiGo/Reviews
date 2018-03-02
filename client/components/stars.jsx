@@ -15,9 +15,9 @@ const Stars = (props) => {
   }
 
   return (
-    <div className="starBox">
+    <div className={props.addedClass !== '' ? `starBox ${props.addedClass}` : 'starBox'}>
       {starArray.map(star => (
-        <Star type={star} />
+        <Star type={star} addedClass={props.addedClass} />
       ))}
     </div>
   );
@@ -25,6 +25,11 @@ const Stars = (props) => {
 
 Stars.propTypes = {
   rating: propTypes.number.isRequired,
+  addedClass: propTypes.string,
+};
+
+Stars.defaultProps = {
+  addedClass: '',
 };
 
 export default Stars;
