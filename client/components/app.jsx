@@ -8,14 +8,15 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      reviews: [], // array of review objects
+      reviews: [],
       restaurant: 'string',
+      restId: 'number',
     };
     this.setReviews = this.setReviews.bind(this);
   }
 
   componentDidMount() {
-    this.setReviews(101);
+    this.setReviews(187);
   }
 
   setReviews(restaurantId) {
@@ -23,6 +24,7 @@ class App extends React.Component {
       this.setState({
         reviews: data,
         restaurant: data[0].restaurantName,
+        restId: data[0].restaurant,
       });
     });
   }
@@ -34,6 +36,7 @@ class App extends React.Component {
           id="write"
           updateReviews={this.setReviews}
           restaurant={this.state.restaurant}
+          restId={this.state.restId}
         />
         <Reviews id="reviews" reviews={this.state.reviews} />
       </div>

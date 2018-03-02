@@ -1,14 +1,19 @@
 import propTypes from 'proptypes';
+import moment from 'moment';
 import React from 'react';
 import User from './user';
 import Button from './button';
 
 const Review = props => (
   <div className="review">
-    <User review={props.review} />
+    <User
+      userName={props.review.userName}
+      userPhoto={props.review.userPhoto}
+      userLocation={props.review.userLocation}
+    />
     <div className="reviewData">
       <div>{props.review.rating}</div>
-      <div>{props.review.date}</div>
+      <div>{moment(props.review.date).format('M/D/YYYY')}</div>
       <div>{props.review.reviewBody}</div>
       <br />
       <div>Was this review... ?</div>
