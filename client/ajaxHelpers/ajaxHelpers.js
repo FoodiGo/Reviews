@@ -15,17 +15,20 @@ const helpers = {
       url: route,
       'content-type': 'application/json',
       data: JSON.stringify(request),
-      success: (data) => {
-        callback(data);
+      success: () => {
+        callback();
       },
     });
   },
 
-  put: (route, request) => {
+  put: (route, request, callback, restaurantId) => {
     $.put({
       url: route,
       'content-type': 'application/json',
       data: JSON.stringify(request),
+      success: () => {
+        callback(restaurantId);
+      },
     });
   },
 };

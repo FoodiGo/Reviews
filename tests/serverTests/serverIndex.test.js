@@ -79,7 +79,7 @@ describe('ajax requests', () => {
 
     request(app)
       .put(`/restaurants/001/reviews/${id}`)
-      .send({ cool: 9 })
+      .send({ Cool: 9 })
       .set('Content-Type', 'application/json')
       .expect(200)
       .end(err => (
@@ -91,7 +91,7 @@ describe('ajax requests', () => {
     request(app)
       .get('/restaurants/001/reviews')
       .expect((res) => {
-        if (res.body[0].cool !== 9) {
+        if (res.body[0].Cool !== 9) {
           done(new Error('PUT request did not update successfully'));
         }
       })
@@ -128,7 +128,7 @@ describe('ajax requests', () => {
 
     request(app)
       .put(`/restaurants/001/reviews/${id}`)
-      .send({ cool: 8, funny: 12 })
+      .send({ Cool: 8, Funny: 12 })
       .set('Content-Type', 'application/json')
       .expect(404)
       .end(err => (

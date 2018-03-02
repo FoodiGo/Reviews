@@ -42,7 +42,7 @@ router.put('/restaurants/:restaurantId/reviews/:reviewId', (req, res) => {
 
   if (requestKeys.length !== 1) {
     res.sendStatus(404);
-  } else if (key !== 'cool' && key !== 'useful' && 'key' !== 'funny') {
+  } else if (key !== 'Cool' && key !== 'Useful' && 'key' !== 'Funny') {
     res.sendStatus(404);
   } else {
     db.updateReview(req.params.reviewId, key, req.body[key], err => (
