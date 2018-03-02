@@ -22,8 +22,9 @@ const helpers = {
   },
 
   put: (route, request, callback, restaurantId) => {
-    $.put({
+    $.ajax({
       url: route,
+      method: 'PUT',
       'content-type': 'application/json',
       data: JSON.stringify(request),
       success: () => {

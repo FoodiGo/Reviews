@@ -37,6 +37,8 @@ router.post('/restaurants/:restaurantId/reviews', (req, res) => {
 
 
 router.put('/restaurants/:restaurantId/reviews/:reviewId', (req, res) => {
+  console.log('body', req.body);
+
   const requestKeys = Object.keys(req.body);
   const key = requestKeys[0];
 
