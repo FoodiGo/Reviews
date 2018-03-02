@@ -13,7 +13,7 @@ const helpers = {
   post: (route, request, callback) => {
     $.post({
       url: route,
-      'content-type': 'application/json',
+      contentType: 'application/json',
       data: JSON.stringify(request),
       success: () => {
         callback();
@@ -21,15 +21,12 @@ const helpers = {
     });
   },
 
-  put: (route, request, callback, restaurantId) => {
+  put: (route, request) => {
     $.ajax({
       url: route,
       method: 'PUT',
-      'content-type': 'application/json',
+      contentType: 'application/json',
       data: JSON.stringify(request),
-      success: () => {
-        callback(restaurantId);
-      },
     });
   },
 };

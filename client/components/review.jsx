@@ -22,21 +22,18 @@ const Review = props => (
       <div className="buttonHeader">Was this review ...?</div>
       <Button
         id={props.review['_id']} // eslint-disable-line
-        updateReviews={props.updateReviews}
         restaurant={props.review.restaurant}
         score={props.review.useful}
         type="Useful"
       />
       <Button
         id={props.review['_id']} // eslint-disable-line
-        updateReviews={props.updateReviews}
         restaurant={props.review.restaurant}
         score={props.review.funny}
         type="Funny"
       />
       <Button
         id={props.review['_id']} // eslint-disable-line
-        updateReviews={props.updateReviews}
         restaurant={props.review.restaurant}
         score={props.review.cool}
         type="Cool"
@@ -59,7 +56,6 @@ Review.propTypes = {
     funny: propTypes.number,
     cool: propTypes.number,
   }).isRequired,
-  updateReviews: propTypes.func.isRequired,
 };
 
 export default Review;

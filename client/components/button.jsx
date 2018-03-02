@@ -25,21 +25,23 @@ class Button extends React.Component {
     const route = `/restaurants/${this.props.restaurant}/reviews/${this.props.id}`;
     const { type, score } = this.state;
     const request = {};
-    request[type] = score;
+    request[type.toLowerCase()] = score;
 
     if (this.state.clicked) {
-      request[type] = score - 1;
-      helpers.put(route, request, this.props.updateReviews, this.props.restaurant);
+      request[type.toLowerCase()] = score - 1;
+      helpers.put(route, request);
 
       this.setState({
         clicked: false,
+        score: score - 1,
       });
     } else {
-      request[type] = score + 1;
-      helpers.put(route, request, this.props.updateReviews, this.props.restaurant);
+      request[type.toLowerCase()] = score + 1;
+      helpers.put(route, request);
 
       this.setState({
         clicked: true,
+        score: score + 1,
       });
     }
   }
@@ -60,7 +62,6 @@ Button.propTypes = {
   restaurant: propTypes.number.isRequired,
   score: propTypes.number.isRequired,
   type: propTypes.string.isRequired,
-  updateReviews: propTypes.func.isRequired,
 };
 
 export default Button;

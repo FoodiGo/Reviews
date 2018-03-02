@@ -39,7 +39,6 @@ class App extends React.Component {
         />
         <Reviews
           reviews={this.state.reviews}
-          updateReviews={this.setReviews}
         />
       </div>
     );

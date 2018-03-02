@@ -12,9 +12,9 @@ const reviewSchema = mongoose.Schema({
   rating: Number,
   date: Date,
   reviewBody: String,
-  Useful: Number,
-  Funny: Number,
-  Cool: Number,
+  useful: Number,
+  funny: Number,
+  cool: Number,
 });
 
 const Review = mongoose.model('Review', reviewSchema);

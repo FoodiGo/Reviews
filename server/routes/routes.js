@@ -12,6 +12,8 @@ router.get('/restaurants/:restaurantId/reviews', (req, res) => {
 
 
 router.post('/restaurants/:restaurantId/reviews', (req, res) => {
+  console.log('body', req.body);
+
   if (!req.body.rating || !req.body.review || !req.body.restaurant) {
     res.sendStatus(404);
   } else {
@@ -37,14 +39,12 @@ router.post('/restaurants/:restaurantId/reviews', (req, res) => {
 
 
 router.put('/restaurants/:restaurantId/reviews/:reviewId', (req, res) => {
-  console.log('body', req.body);
-
   const requestKeys = Object.keys(req.body);
   const key = requestKeys[0];
 
   if (requestKeys.length !== 1) {
     res.sendStatus(404);
-  } else if (key !== 'Cool' && key !== 'Useful' && 'key' !== 'Funny') {
+  } else if (key !== 'cool' && key !== 'funny' && key !== 'useful') {
     res.sendStatus(404);
   } else {
     db.updateReview(req.params.reviewId, key, req.body[key], err => (
