@@ -28,6 +28,11 @@ describe('Review container', () => {
     expect(users.length).toBe(1);
   });
 
+  test('Review container should render an instance of Stars', () => {
+    const stars = review.find('.starBox');
+    expect(stars.length).toBe(1);
+  });
+
   test('Review container should render three instances of Button', () => {
     const buttons = review.find('button');
     expect(buttons.length).toBe(3);
