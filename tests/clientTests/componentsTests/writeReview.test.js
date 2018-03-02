@@ -9,4 +9,9 @@ describe('WriteReview container', () => {
     const users = write.find('#currentUser');
     expect(users.length).toBe(1);
   });
+
+  test('WriteReview container should render an instance of Stars', () => {
+    const stars = write.find('.starBox');
+    expect(stars.length).toBe(1);
+  });
 });

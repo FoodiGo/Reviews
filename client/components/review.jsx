@@ -3,6 +3,7 @@ import moment from 'moment';
 import React from 'react';
 import User from './user';
 import Button from './button';
+import Stars from './stars';
 
 const Review = props => (
   <div className="review">
@@ -12,7 +13,7 @@ const Review = props => (
       userLocation={props.review.userLocation}
     />
     <div className="reviewData">
-      <div>{props.review.rating}</div>
+      <div><Stars rating={props.review.rating} id={props.review['_id']} /></div>
       <div>{moment(props.review.date).format('M/D/YYYY')}</div>
       <div>{props.review.reviewBody}</div>
       <br />
