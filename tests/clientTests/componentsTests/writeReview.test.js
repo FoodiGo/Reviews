@@ -2,8 +2,8 @@ import React from 'react';
 import { mount } from 'enzyme';
 import WriteReview from '../../../client/components/writeReview';
 
-describe('writeReview container', () => {
-  const write = mount(<WriteReview />);
+describe('WriteReview container', () => {
+  const write = mount(<WriteReview restaurant="Mary's" />);
 
   test('WriteReview container should render an instance of User', () => {
     const users = write.find('#currentUser');

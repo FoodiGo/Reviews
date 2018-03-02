@@ -27,8 +27,8 @@ User.propTypes = {
 
 User.defaultProps = {
   userName: '',
-  userPhoto: '',
-  userLocation: 'San Francisco, CA',
+  userPhoto: 'https://s3-us-west-1.amazonaws.com/foodigouserphotos/DefaultUser.png',
+  userLocation: '',
 };
 
 export default User;

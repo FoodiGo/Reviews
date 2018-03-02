@@ -33,12 +33,11 @@ class App extends React.Component {
     return (
       <div>
         <WriteReview
-          id="write"
           updateReviews={this.setReviews}
           restaurant={this.state.restaurant}
           restId={this.state.restId}
         />
-        <Reviews id="reviews" reviews={this.state.reviews} />
+        <Reviews reviews={this.state.reviews} />
       </div>
     );
   }

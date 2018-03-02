@@ -14,7 +14,6 @@ class Button extends React.Component {
     this.state = {
       type: this.props.type,
       score: this.props.score,
-      clicked: false,
     };
   }
 
