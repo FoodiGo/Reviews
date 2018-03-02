@@ -1,0 +1,46 @@
+.userPhotos {
+  height: 60px;
+  width: 60px;
+  border-radius: 5px;
+}
+
+.review {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+}
+
+.userActions {
+  display: none;
+}
+
+.review:hover .userActions {
+  display: block;
+}
+
+.users {
+  flex-basis: 25%;
+}
+
+.userFlex {
+  display: flex;
+  flex-direction: row;
+}
+
+.reviewData {
+  flex-basis: 75%;
+}
+
+.userRight {
+
+}
+
+#write {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+}

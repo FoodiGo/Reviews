@@ -48,7 +48,7 @@ Review.propTypes = {
     userPhoto: propTypes.string,
     userLocation: propTypes.string,
     rating: propTypes.number,
-    date: propTypes.object,
+    date: propTypes.string,
     reviewBody: propTypes.string,
     useful: propTypes.number,
     funny: propTypes.number,
