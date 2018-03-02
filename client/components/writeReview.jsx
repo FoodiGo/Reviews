@@ -3,7 +3,7 @@ import User from './user';
 
 const WriteReview = props => (
   <div>
-    <User id="currentUser" />
+    {/*<User id="currentUser" />*/}
     <div>
       <div>Stars Display</div>
       <div>Start Your Review of -Insert RestaurantName-</div>

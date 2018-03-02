@@ -5,13 +5,13 @@ import Review from './review';
 const Reviews = props => (
   <div>
     {props.reviews.map(review => (
-      <Review review={review} />
+      <Review key={review['_id']} review={review} /> // eslint-disable-line
     ))}
   </div>
 );
 
 Reviews.propTypes = {
-  reviews: propTypes.arrayOf(propTypes.objects).isRequired,
+  reviews: propTypes.arrayOf(propTypes.object).isRequired,
 };
 
 export default Reviews;
