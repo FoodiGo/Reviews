@@ -6,11 +6,21 @@ const Stars = (props) => {
   const { rating } = props;
   const starArray = [];
 
-  for (let i = 0; i < 5; i += 1) {
-    if (i < rating) {
-      starArray.push('selectedStar');
-    } else {
-      starArray.push('greyStar');
+  if (props.addedClass === '') {
+    for (let i = 0; i < 5; i += 1) {
+      if (i < rating) {
+        starArray.push('selectedStar');
+      } else {
+        starArray.push('greyStar');
+      }
+    }
+  } else {
+    for (let i = 0; i < 5; i += 1) {
+      if (i < rating) {
+        starArray.push(`selectedStar ${props.addedClass} star${i}`);
+      } else {
+        starArray.push(`greyStar ${props.addedClass} star${i}`);
+      }
     }
   }
 

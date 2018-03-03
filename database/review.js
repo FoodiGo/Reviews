@@ -9,6 +9,8 @@ const reviewSchema = mongoose.Schema({
   userName: String,
   userPhoto: String,
   userLocation: String,
+  userFriends: Number,
+  userReviews: Number,
   rating: Number,
   date: Date,
   reviewBody: String,

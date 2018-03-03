@@ -14,6 +14,8 @@ const generateReview = (restaurantObj, numStars, date) => {
     userName: curUser.name,
     userPhoto: curUser.photo,
     userLocation: curUser.location,
+    userFriends: curUser.friends,
+    userReviews: curUser.reviews,
     rating: numStars,
     date: new Date(date),
     reviewBody: data(restaurantObj.foodType, restaurantObj.title, numStars),

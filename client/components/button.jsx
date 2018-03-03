@@ -3,9 +3,9 @@ import propTypes from 'proptypes';
 import helpers from '../ajaxHelpers/ajaxHelpers';
 
 const buttonIcon = {
-  Useful: '',
-  Funny: '',
-  Cool: '',
+  Useful: 'https://s3-us-west-1.amazonaws.com/foodigoiconlib/greyLightbulb.png',
+  Funny: 'https://s3-us-west-1.amazonaws.com/foodigoiconlib/greySmileyFace.png',
+  Cool: 'https://s3-us-west-1.amazonaws.com/foodigoiconlib/greyCoolFace.png',
 };
 
 class Button extends React.Component {
@@ -48,10 +48,10 @@ class Button extends React.Component {
 
   render() {
     return (
-      <button onClick={this.handleClick}>
-        <span className="buttonImage">{buttonIcon[this.props.type]}</span>
-        <span className="buttonType"> {this.state.type}</span>
-        <span>{this.state.score > 0 ? ` ${this.state.score}` : ''}</span>
+      <button className="socialPoints" onClick={this.handleClick}>
+        <img alt="" className="buttonImage buttonAspect" src={buttonIcon[this.props.type]} />
+        <div className="buttonType buttonAspect"> {this.state.type}</div>
+        <div className="buttonAspect">{this.state.score > 0 ? ` ${this.state.score}` : ''}</div>
       </button>
     );
   }

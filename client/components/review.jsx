@@ -11,6 +11,8 @@ const Review = props => (
       userName={props.review.userName}
       userPhoto={props.review.userPhoto}
       userLocation={props.review.userLocation}
+      userFriends={props.review.userFriends}
+      userReviews={props.review.userReviews}
     />
     <div className="reviewData">
       <div className="starsDateBox">
@@ -20,24 +22,26 @@ const Review = props => (
       <div>{props.review.reviewBody}</div>
       <br />
       <div className="buttonHeader">Was this review ...?</div>
-      <Button
-        id={props.review['_id']} // eslint-disable-line
-        restaurant={props.review.restaurant}
-        score={props.review.useful}
-        type="Useful"
-      />
-      <Button
-        id={props.review['_id']} // eslint-disable-line
-        restaurant={props.review.restaurant}
-        score={props.review.funny}
-        type="Funny"
-      />
-      <Button
-        id={props.review['_id']} // eslint-disable-line
-        restaurant={props.review.restaurant}
-        score={props.review.cool}
-        type="Cool"
-      />
+      <div className="buttonBox">
+        <Button
+          id={props.review['_id']} // eslint-disable-line
+          restaurant={props.review.restaurant}
+          score={props.review.useful}
+          type="Useful"
+        />
+        <Button
+          id={props.review['_id']} // eslint-disable-line
+          restaurant={props.review.restaurant}
+          score={props.review.funny}
+          type="Funny"
+        />
+        <Button
+          id={props.review['_id']} // eslint-disable-line
+          restaurant={props.review.restaurant}
+          score={props.review.cool}
+          type="Cool"
+        />
+      </div>
     </div>
   </div>
 );
@@ -49,6 +53,8 @@ Review.propTypes = {
     userName: propTypes.string,
     userPhoto: propTypes.string,
     userLocation: propTypes.string,
+    userFriends: propTypes.number,
+    userReviews: propTypes.number,
     rating: propTypes.number,
     date: propTypes.string,
     reviewBody: propTypes.string,
