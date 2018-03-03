@@ -20,24 +20,26 @@ const Review = props => (
       <div>{props.review.reviewBody}</div>
       <br />
       <div className="buttonHeader">Was this review ...?</div>
-      <Button
-        id={props.review['_id']} // eslint-disable-line
-        restaurant={props.review.restaurant}
-        score={props.review.useful}
-        type="Useful"
-      />
-      <Button
-        id={props.review['_id']} // eslint-disable-line
-        restaurant={props.review.restaurant}
-        score={props.review.funny}
-        type="Funny"
-      />
-      <Button
-        id={props.review['_id']} // eslint-disable-line
-        restaurant={props.review.restaurant}
-        score={props.review.cool}
-        type="Cool"
-      />
+      <div className="buttonBox">
+        <Button
+          id={props.review['_id']} // eslint-disable-line
+          restaurant={props.review.restaurant}
+          score={props.review.useful}
+          type="Useful"
+        />
+        <Button
+          id={props.review['_id']} // eslint-disable-line
+          restaurant={props.review.restaurant}
+          score={props.review.funny}
+          type="Funny"
+        />
+        <Button
+          id={props.review['_id']} // eslint-disable-line
+          restaurant={props.review.restaurant}
+          score={props.review.cool}
+          type="Cool"
+        />
+      </div>
     </div>
   </div>
 );

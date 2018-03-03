@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'proptypes';
 import WriteReview from './writeReview';
 import Reviews from './reviews';
 import helpers from '../ajaxHelpers/ajaxHelpers';
@@ -16,7 +17,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.setReviews(198);
+    this.setReviews(this.props.restaurantId);
   }
 
   setReviews(restaurantId) {
@@ -44,5 +45,9 @@ class App extends React.Component {
     );
   }
 }
+
+App.propTypes = {
+  restaurantId: propTypes.number.isRequired,
+};
 
 export default App;

@@ -13,11 +13,26 @@ const User = props => (
       </div>
     </div>
     <div className="userActions">
-      <div className="action">Share Review</div>
-      <div className="action">Embed Review</div>
-      <div className="action">Compliment</div>
-      <div className="action">Send Message</div>
-      <div className="action">Follow {props.userName}</div>
+      <div className="actionLine">
+        <img alt="" className="actionIcons" src="https://s3-us-west-1.amazonaws.com/foodigoiconlib/blueShareIcon.png" />
+        <div className="action">Share Review</div>
+      </div>
+      <div className="actionLine">
+        <img alt="" className="actionIcons" src="https://s3-us-west-1.amazonaws.com/foodigoiconlib/blueEmbedIcon.png" />
+        <div className="action">Embed Review</div>
+      </div>
+      <div className="actionLine">
+        <img alt="" className="actionIcons" src="https://s3-us-west-1.amazonaws.com/foodigoiconlib/blueCompliment.png" />
+        <div className="action">Compliment</div>
+      </div>
+      <div className="actionLine">
+        <img alt="" className="actionIcons" src="https://s3-us-west-1.amazonaws.com/foodigoiconlib/blueRoundMessage.png" />
+        <div className="action">Send Message</div>
+      </div>
+      <div className="actionLine">
+        <img alt="" className="actionIcons" src="https://s3-us-west-1.amazonaws.com/foodigoiconlib/blueFollowIcon.png" />
+        <div className="action">Follow {props.userName}</div>
+      </div>
     </div>
   </div>
 );
