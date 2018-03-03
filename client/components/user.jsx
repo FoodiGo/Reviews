@@ -10,6 +10,20 @@ const User = props => (
       <div className="userRight">
         <div className="userNames">{props.userName}</div>
         <div className="userLocations">{props.userLocation}</div>
+        <div className="userSpecials">
+          <img alt="friends" className="userIcons" src="https://s3-us-west-1.amazonaws.com/foodigoiconlib/orangeFriendsIcon.png" />
+          <div className="specialsCount">
+            <span className="specialsNum">{props.userFriends}
+            </span> friends
+          </div>
+        </div>
+        <div className="userSpecials">
+          <img alt="userReviews" className="userIcons" src="https://s3-us-west-1.amazonaws.com/foodigoiconlib/orangeStar.png" />
+          <div className="specialsCount">
+            <span className="specialsNum">{props.userReviews}
+            </span> reviews
+          </div>
+        </div>
       </div>
     </div>
     <div className="userActions">
@@ -41,6 +55,8 @@ User.propTypes = {
   userName: propTypes.string,
   userPhoto: propTypes.string,
   userLocation: propTypes.string,
+  userFriends: propTypes.number,
+  userReviews: propTypes.number,
   addedClass: '',
 };
 
@@ -48,6 +64,8 @@ User.defaultProps = {
   userName: '',
   userPhoto: 'https://s3-us-west-1.amazonaws.com/foodigouserphotos/DefaultUser.png',
   userLocation: '',
+  userFriends: 0,
+  userReviews: 0,
   addedClass: '',
 };
 

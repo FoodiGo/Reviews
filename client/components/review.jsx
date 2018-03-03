@@ -11,6 +11,8 @@ const Review = props => (
       userName={props.review.userName}
       userPhoto={props.review.userPhoto}
       userLocation={props.review.userLocation}
+      userFriends={props.review.userFriends}
+      userReviews={props.review.userReviews}
     />
     <div className="reviewData">
       <div className="starsDateBox">
@@ -51,6 +53,8 @@ Review.propTypes = {
     userName: propTypes.string,
     userPhoto: propTypes.string,
     userLocation: propTypes.string,
+    userFriends: propTypes.number,
+    userReviews: propTypes.number,
     rating: propTypes.number,
     date: propTypes.string,
     reviewBody: propTypes.string,
