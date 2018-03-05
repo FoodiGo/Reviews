@@ -35,7 +35,7 @@ const reviewBodyGenerator = (foodType, restaurantName, reviewStars) => {
       `Easily the best meal I've had in a while! I highly recommend the ${dishOne} -- so delicious. Definitely do not miss this place.`,
       `HOLY MOLY! The ${dishOne}! The ${dishTwo}! Everything looked and tasted amazing! And their service ... WOW! ${serverName} was the absolute best!  Honestly, I wish I could give this place ten stars -- they deserve it!`,
       `My mom and I both loved this place! I took her there to celebrate her birthday and ${serverName} really went above and beyond to make my mom feel special.`,
-      `My partner and I always go here! It's hands-down the best place to go for ${foodType} in the whole city.`,
+      `My partner and I always go here! It's hands-down the best place to go for ${foodType} cuisine in the whole city.`,
       `OMG I srsly wish I could eat ${dishOne} every day it is sooooooooooo good!`,
       `The minute you walk in the door at ${restaurantName}, you are hit with the amazing smells coming out of the kitchen. I promise, if you weren't hungry before, you WILL be then. Take my word for it and try the ${dishOne}. It's simply divine.`,
       `The host, ${serverName} went across the street to get my daughter some crayons! Can you believe that? Anyone who treats my family that way will always get my business.`,
