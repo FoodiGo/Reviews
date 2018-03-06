@@ -57,7 +57,7 @@ User.propTypes = {
   userLocation: propTypes.string,
   userFriends: propTypes.number,
   userReviews: propTypes.number,
-  addedClass: '',
+  addedClass: propTypes.string,
 };
 
 User.defaultProps = {
