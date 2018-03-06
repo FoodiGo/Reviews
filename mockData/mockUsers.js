@@ -30,7 +30,7 @@ const users = [
   {
     name: 'Beth Johnson',
     photo: 'https://s3-us-west-1.amazonaws.com/foodigouserphotos/BJ.png',
-    location: 'Cleveland, Ohio',
+    location: 'Cleveland, OH',
     friends: 289,
     reviews: 11,
   },
