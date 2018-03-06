@@ -6,12 +6,12 @@ describe('WriteReview container', () => {
   const write = mount(<WriteReview restaurant="Mary's" />);
 
   test('WriteReview container should render an instance of User', () => {
-    const users = write.find('.users');
+    const users = write.find('.rev_users');
     expect(users.length).toBe(1);
   });
 
   test('WriteReview container should render an instance of Stars', () => {
-    const stars = write.find('.starBox');
+    const stars = write.find('.rev_starBox');
     expect(stars.length).toBe(1);
   });
 });

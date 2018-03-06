@@ -2,13 +2,13 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.userPhotos {
+.rev_userPhotos {
   height: 60px;
   width: 60px;
   border-radius: 5px;
 }
 
-.review {
+.rev_review {
   padding: 10px;
   margin: 10px;
   display: flex;
@@ -16,28 +16,28 @@ body {
   justify-content: stretch;
 }
 
-.userActions {
+.rev_userActions {
   display: none;
 }
 
-.review:hover .userActions {
+.rev_review:hover .rev_userActions {
   display: block;
 }
 
-.users {
+.rev_users {
   flex-basis: 200px;
 }
 
-.userFlex {
+.rev_userFlex {
   display: flex;
   flex-direction: row;
 }
 
-.reviewData {
+.rev_reviewData {
   flex-basis: 75%;
 }
 
-#write {
+#rev_write {
   padding: 10px;
   margin: 10px;
   display: flex;
@@ -45,14 +45,14 @@ body {
   justify-content: stretch;
 }
 
-.starImg {
+.rev_starImg {
   width: 13px;
   height: 13px;
   display: flex;
   mix-blend-mode: color-dodge;
 }
 
-.star {
+.rev_star {
   width: 20px;
   height: 20px;
   display: flex;
@@ -62,64 +62,64 @@ body {
   margin: 1px;
 }
 
-.writeStar .star {
+.rev_writeStar .rev_star {
   height: 30px;
   width: 30px;
   margin: 2px;
 }
 
-.writeStar .starImg {
+.rev_writeStar .rev_starImg {
   height: 20px;
   width: 20px;
 }
 
-.writeStar.star:hover {
+.rev_writeStar.rev_star:hover {
   background-color: #EF5D53;
 }
 
 
-.greyStar {
+.rev_greyStar {
   background-color: #CCCCCC;
 }
 
-.selectedStar {
+.rev_selectedStar {
   background-color: #EF5D53;
 }
 
-.starBox, .starsDateBox {
+.rev_starBox, .rev_starsDateBox {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
 
-.writeStar .starBox {
+.rev_writeStar .rev_starBox {
   margin: 5px;
   padding: 3px;
 }
 
-.date {
+.rev_date {
   margin: 2px;
   color: #666;
 }
 
-.buttonHeader {
+.rev_buttonHeader {
   font-weight: 900;
   font-size: 12px;
   color: #666;
   margin-bottom: 4px;
 }
 
-.buttonBox {
+.rev_buttonBox {
   display: flex;
   flex-direction: row;
 }
 
-.buttonAspect {
+.rev_buttonAspect {
   margin: 2px;
 }
 
-.socialPoints {
+.rev_socialPoints {
   height: 30px;
   color: #666;
   background-color: #f5f5f5;
@@ -129,44 +129,45 @@ body {
   border-color: #ADACAC;
   border-width: 1px;
   font-weight: 900;
+  font-size: 11px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
 
-.socialPoints:hover {
+.rev_socialPoints:hover {
   background-color: #fff;
 }
 
-.buttonImage {
+.rev_buttonImage {
   height: 15px;
   width: 15px;
   color: black;
 }
 
-.userNames {
+.rev_userNames {
   font-size: 16px;
   font-weight: 900;
   color: #006EB2;
 }
 
-.userLocations {
+.rev_userLocations {
   font-size: 14px;
   font-weight: 900;
 }
 
-.userActions {
+.rev_userActions {
   font-size: 12px;
   font-weight: 900;
   color: #006EB2;
 }
 
-.userRight {
+.rev_userRight {
   margin: 5px;
 }
 
-.action {
+.rev_action {
   margin: 2px;
   padding: 2px;
   border: solid;
@@ -175,22 +176,22 @@ body {
   border-bottom-color: #eee;
 }
 
-.actionLine {
+.rev_actionLine {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.actionIcons {
+.rev_actionIcons {
   height: 12px;
   width: 12px;
 }
 
-.action:hover, .userNames:hover, #startReview:hover {
+.rev_action:hover, .rev_userNames:hover, #rev_startReview:hover {
   text-decoration: underline;
 }
 
-#writeBox {
+#rev_writeBox {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -204,11 +205,11 @@ body {
   flex-basis: 75%
 }
 
-#restName {
+#rev_restName {
   font-weight: 900;
 }
 
-#startReview {
+#rev_startReview {
   margin: 5px;
   padding: 3px;
   border: solid;
@@ -217,29 +218,29 @@ body {
   border-top-color: #ADACAC;
 }
 
-.currUser .userNames {
+.rev_currUser .rev_userNames {
  background-color: #eee;
  border-radius: 3px;
 }
 
-.userIcons {
+.rev_userIcons {
   height: 12px;
   width: 12px;
   border-radius: 2px;
 }
 
-.userSpecials {
+.rev_userSpecials {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.specialsCount {
+.rev_specialsCount {
   font-size: 12px;
   color: #666;
   margin: 2px;
 }
 
-.specialsNum {
+.rev_specialsNum {
   font-weight: 900;
 }

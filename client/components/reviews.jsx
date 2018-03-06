@@ -3,7 +3,7 @@ import propTypes from 'proptypes';
 import Review from './review';
 
 const Reviews = props => (
-  <div id="reviews">
+  <div id="rev_reviews">
     {props.reviews.map(review => (
       <Review key={review['_id']} review={review} /> // eslint-disable-line
     ))}

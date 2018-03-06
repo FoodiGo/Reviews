@@ -8,7 +8,7 @@ describe('Star components', () => {
   test('Star component should contain the star image ip address', () => {
     const image = 'https://s3-us-west-1.amazonaws.com/foodigouserphotos/Star.png';
 
-    const starImage = star.find('.starImg');
+    const starImage = star.find('.rev_starImg');
     expect(starImage.html().includes(image)).toBe(true);
   });
 });

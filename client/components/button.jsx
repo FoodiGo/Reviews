@@ -48,10 +48,10 @@ class Button extends React.Component {
 
   render() {
     return (
-      <button className="socialPoints" onClick={this.handleClick}>
-        <img alt="" className="buttonImage buttonAspect" src={buttonIcon[this.props.type]} />
-        <div className="buttonType buttonAspect"> {this.state.type}</div>
-        <div className="buttonAspect">{this.state.score > 0 ? ` ${this.state.score}` : ''}</div>
+      <button className="rev_socialPoints" onClick={this.handleClick}>
+        <img alt="" className="rev_buttonImage rev_buttonAspect" src={buttonIcon[this.props.type]} />
+        <div className="rev_buttonType rev_buttonAspect"> {this.state.type}</div>
+        <div className="rev_buttonAspect">{this.state.score > 0 ? ` ${this.state.score}` : ''}</div>
       </button>
     );
   }

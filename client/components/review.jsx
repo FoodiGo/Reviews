@@ -6,7 +6,7 @@ import Button from './button';
 import Stars from './stars';
 
 const Review = props => (
-  <div className="review">
+  <div className="rev_review">
     <User
       userName={props.review.userName}
       userPhoto={props.review.userPhoto}
@@ -14,15 +14,15 @@ const Review = props => (
       userFriends={props.review.userFriends}
       userReviews={props.review.userReviews}
     />
-    <div className="reviewData">
-      <div className="starsDateBox">
+    <div className="rev_reviewData">
+      <div className="rev_starsDateBox">
         <div><Stars rating={props.review.rating} id={props.review['_id']} /></div>
-        <div className="date">{moment(props.review.date).format('M/D/YYYY')}</div>
+        <div className="rev_date">{moment(props.review.date).format('M/D/YYYY')}</div>
       </div>
       <div>{props.review.reviewBody}</div>
       <br />
-      <div className="buttonHeader">Was this review ...?</div>
-      <div className="buttonBox">
+      <div className="rev_buttonHeader">Was this review ...?</div>
+      <div className="rev_buttonBox">
         <Button
           id={props.review['_id']} // eslint-disable-line
           restaurant={props.review.restaurant}

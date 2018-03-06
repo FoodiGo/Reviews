@@ -24,7 +24,7 @@ describe('Reviews container', () => {
   const reviewsBox = mount(<Reviews reviews={reviews} />);
 
   test('Reviews container should render all reviews passed in', () => {
-    const allReviews = reviewsBox.find('.review');
+    const allReviews = reviewsBox.find('.rev_review');
     expect(allReviews.length).toBe(1);
   });
 });
