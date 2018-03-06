@@ -24,12 +24,12 @@ describe('Review container', () => {
   const review = mount(<Review review={reviews[0]} />);
 
   test('Review container should render an instance of User', () => {
-    const users = review.find('div.users');
+    const users = review.find('div.rev_users');
     expect(users.length).toBe(1);
   });
 
   test('Review container should render an instance of Stars', () => {
-    const stars = review.find('.starBox');
+    const stars = review.find('.rev_starBox');
     expect(stars.length).toBe(1);
   });
 

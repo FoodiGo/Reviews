@@ -12,12 +12,12 @@ describe('App container', () => {
   });
 
   test('App container should render an instance of WriteReview container', () => {
-    const writeReview = app.find('#write');
+    const writeReview = app.find('#rev_write');
     expect(writeReview.length).toBe(1);
   });
 
   test('App container should render an instance of Reviews container', () => {
-    const reviews = app.find('#reviews');
+    const reviews = app.find('#rev_reviews');
     expect(reviews.length).toBe(1);
   });
 });
