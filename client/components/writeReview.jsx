@@ -4,12 +4,12 @@ import User from './user';
 import Stars from './stars';
 
 const WriteReview = props => (
-  <div id="write">
-    <User addedClass="currUser" />
-    <div id="writeBox">
-      <Stars rating={0} addedClass="writeStar" />
-      <div id="startReview">Start your review of
-        <span id="restName"> {props.restaurant}</span>
+  <div id="rev_write">
+    <User addedClass="rev_currUser" />
+    <div id="rev_writeBox">
+      <Stars rating={0} addedClass="rev_writeStar" />
+      <div id="rev_startReview">Start your review of
+        <span id="rev_restName"> {props.restaurant}</span>
       </div>
     </div>
   </div>

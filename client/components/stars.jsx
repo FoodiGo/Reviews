@@ -9,23 +9,23 @@ const Stars = (props) => {
   if (props.addedClass === '') {
     for (let i = 0; i < 5; i += 1) {
       if (i < rating) {
-        starArray.push('selectedStar');
+        starArray.push('rev_selectedStar');
       } else {
-        starArray.push('greyStar');
+        starArray.push('rev_greyStar');
       }
     }
   } else {
     for (let i = 0; i < 5; i += 1) {
       if (i < rating) {
-        starArray.push(`selectedStar ${props.addedClass} star${i}`);
+        starArray.push(`rev_selectedStar ${props.addedClass} rev_star${i}`);
       } else {
-        starArray.push(`greyStar ${props.addedClass} star${i}`);
+        starArray.push(`rev_greyStar ${props.addedClass} rev_star${i}`);
       }
     }
   }
 
   return (
-    <div className={props.addedClass !== '' ? `starBox ${props.addedClass}` : 'starBox'}>
+    <div className={props.addedClass !== '' ? `rev_starBox ${props.addedClass}` : 'rev_starBox'}>
       {starArray.map(star => (
         <Star type={star} addedClass={props.addedClass} />
       ))}
