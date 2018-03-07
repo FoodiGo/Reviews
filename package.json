@@ -11,6 +11,7 @@
   "scripts": {
     "test": "NODE_ENV=MONGOTEST jest",
     "babel": "./node_modules/.bin/webpack -d --watch",
+    "build": "./node_modules/.bin/webpack -p",
     "start-server": "NODE_ENV=MONGO nodemon server/serverIndex.js",
     "seed-db": "node database/seedDB.js"
   },
