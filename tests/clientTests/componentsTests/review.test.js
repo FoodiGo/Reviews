@@ -10,9 +10,7 @@ const reviews = [
     userPhoto: 'https://s3-us-west-1.amazonaws.com/foodigouserphotos/MB.jpg',
     userLocation: 'Auckland, New Zealand',
     rating: 5,
-    date: {
-      $date: '2018-02-12T19:49:00.000Z',
-    },
+    date: '2018-02-12T19:49:00.000Z',
     reviewBody: 'Easily the best meal I\'ve had in a while! I highly recommend the bruschetta -- so delicious. Definitely do not miss this place.',
     useful: 4,
     funny: 6,

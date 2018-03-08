@@ -26,8 +26,8 @@ const Stars = (props) => {
 
   return (
     <div className={props.addedClass !== '' ? `rev_starBox ${props.addedClass}` : 'rev_starBox'}>
-      {starArray.map(star => (
-        <Star type={star} addedClass={props.addedClass} />
+      {starArray.map((star, index) => (
+        <Star type={star} addedClass={props.addedClass} key={`${props.revId}-star${index}`} />
       ))}
     </div>
   );
@@ -36,6 +36,7 @@ const Stars = (props) => {
 Stars.propTypes = {
   rating: propTypes.number.isRequired,
   addedClass: propTypes.string,
+  revId: propTypes.string.isRequired,
 };
 
 Stars.defaultProps = {

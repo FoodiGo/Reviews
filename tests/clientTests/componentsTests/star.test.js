@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import Star from '../../../client/components/star';
 
 describe('Star components', () => {
-  const star = mount(<Star />);
+  const star = mount(<Star type="selected" />);
 
   test('Star component should contain the star image ip address', () => {
     const image = 'https://s3-us-west-1.amazonaws.com/foodigouserphotos/Star.png';

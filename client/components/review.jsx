@@ -16,7 +16,7 @@ const Review = props => (
     />
     <div className="rev_reviewData">
       <div className="rev_starsDateBox">
-        <div><Stars rating={props.review.rating} id={props.review['_id']} /></div>
+        <div><Stars rating={props.review.rating} revId={props.review['_id']} /></div> {/* eslint-disable-line */}
         <div className="rev_date">{moment(props.review.date).format('M/D/YYYY')}</div>
       </div>
       <div>{props.review.reviewBody}</div>

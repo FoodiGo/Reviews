@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import App from '../../../client/components/app';
 
 describe('App container', () => {
-  const app = mount(<App />);
+  const app = mount(<App restaurantId={104} />);
 
   test('App container should be stateful', () => {
     expect(app.state('reviews')).toBeDefined();
