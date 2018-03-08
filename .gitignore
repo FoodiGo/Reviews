@@ -5,3 +5,5 @@ coverage
 mockData/.DS_Store
 npm-debug.log
 .env
+archive.zip
+.elasticbeanstalk

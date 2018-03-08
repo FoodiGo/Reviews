@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import Stars from '../../../client/components/stars';
 
 describe('Stars container', () => {
-  const starsBox = mount(<Stars rating={3} />);
+  const starsBox = mount(<Stars rating={3} revId="678" />);
   const allStars = starsBox.find('.rev_star');
 
   test('Stars container should contain 5 instances of Star', () => {
