@@ -43,7 +43,7 @@ const User = props => (
         <img alt="" className="rev_actionIcons" src="https://s3-us-west-1.amazonaws.com/foodigoiconlib/blueRoundMessage.png" />
         <div className="rev_action">Send Message</div>
       </div>
-      <div className="rev_actionLine">
+      <div className="rev_actionLine rev_lastAction">
         <img alt="" className="rev_actionIcons" src="https://s3-us-west-1.amazonaws.com/foodigoiconlib/blueFollowIcon.png" />
         <div className="rev_action">Follow {props.userName}</div>
       </div>

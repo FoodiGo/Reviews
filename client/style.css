@@ -11,6 +11,10 @@
   flex-direction: row;
   justify-content: stretch;
   font-family: 'Roboto', sans-serif;
+  border: solid;
+  border-width: 1px; 
+  border-color: #fff;
+  border-top-color: #eee;
 }
 
 .rev_userActions {
@@ -165,16 +169,23 @@
 .rev_action {
   margin: 2px;
   padding: 2px;
+  
+}
+
+.rev_actionLine {
+  margin-right: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: stretch;
   border: solid;
   border-width: 1px; 
   border-color: #fff;
   border-bottom-color: #eee;
 }
 
-.rev_actionLine {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.rev_lastAction {
+  border: none;
 }
 
 .rev_actionIcons {
@@ -238,6 +249,52 @@
 
 .rev_specialsNum {
   font-weight: 900;
+}
+
+.rev_clickStars, #rev_startReview {
+  font-family: 'Roboto', sans-serif;
+  color: #006EB2;
+}
+
+#rev_writeReviewBox {
+  margin: 3px;
+  padding: 3px;
+}
+
+#rev_input {
+  height: 50px;
+  width: 350px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#rev_writeButtonBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 3px;
+}
+
+#rev_writeCancel, #rev_submitButton {
+  height: 30px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  background-color: #EF5D53;
+  border-radius: 3px;
+  margin: 3px;
+  border: solid;
+  border-color: #B8433E;
+  border-width: 1px;
+  font-weight: 900;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#rev_writeCancel:hover, #rev_submitButton:hover {
+  background-color: #E54C49;
 }
 
 .rev_hide {
