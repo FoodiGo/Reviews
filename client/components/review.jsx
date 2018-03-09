@@ -15,32 +15,36 @@ const Review = props => (
       userReviews={props.review.userReviews}
     />
     <div className="rev_reviewData">
-      <div className="rev_starsDateBox">
-        <div><Stars rating={props.review.rating} revId={props.review['_id']} /></div> {/* eslint-disable-line */}
-        <div className="rev_date">{moment(props.review.date).format('M/D/YYYY')}</div>
+      <div id="rev_reviewDataTop">
+        <div className="rev_starsDateBox">
+          <div><Stars rating={props.review.rating} revId={props.review['_id']} /></div> {/* eslint-disable-line */}
+          <div className="rev_date">{moment(props.review.date).format('M/D/YYYY')}</div>
+        </div>
+        <div>{props.review.reviewBody}</div>
       </div>
-      <div>{props.review.reviewBody}</div>
       <br />
-      <div className="rev_buttonHeader">Was this review ...?</div>
-      <div className="rev_buttonBox">
-        <Button
-          id={props.review['_id']} // eslint-disable-line
-          restaurant={props.review.restaurant}
-          score={props.review.useful}
-          type="Useful"
-        />
-        <Button
-          id={props.review['_id']} // eslint-disable-line
-          restaurant={props.review.restaurant}
-          score={props.review.funny}
-          type="Funny"
-        />
-        <Button
-          id={props.review['_id']} // eslint-disable-line
-          restaurant={props.review.restaurant}
-          score={props.review.cool}
-          type="Cool"
-        />
+      <div id="rev_reviewDataBottom">
+        <div className="rev_buttonHeader">Was this review ...?</div>
+        <div className="rev_buttonBox">
+          <Button
+            id={props.review['_id']} // eslint-disable-line
+            restaurant={props.review.restaurant}
+            score={props.review.useful}
+            type="Useful"
+          />
+          <Button
+            id={props.review['_id']} // eslint-disable-line
+            restaurant={props.review.restaurant}
+            score={props.review.funny}
+            type="Funny"
+          />
+          <Button
+            id={props.review['_id']} // eslint-disable-line
+            restaurant={props.review.restaurant}
+            score={props.review.cool}
+            type="Cool"
+          />
+        </div>
       </div>
     </div>
   </div>

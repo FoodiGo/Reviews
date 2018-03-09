@@ -137,7 +137,7 @@ class WriteReview extends React.Component {
             id="rev_writeReviewBox"
             className={this.state.startReview ? null : 'rev_hide'}
           >
-            <input id="rev_input" />
+            <textarea id="rev_input" />
             <div id="rev_writeButtonBox">
               <button id="rev_writeCancel" onClick={this.handleCancelClick}>
                 Cancel
