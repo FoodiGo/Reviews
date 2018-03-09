@@ -5,7 +5,7 @@ const getRandomIndex = array => (
 const reviewBodyGenerator = (foodType, restaurantName, reviewStars) => {
   const dishesByFoodType = {
     Pizza: ['Pepperoni Supreme', 'Margherita', 'pizza sauce', 'cheese blend', 'garlic sauce',
-      'Hawaiian Deluxe', 'selection of toppings', 'garic bread', 'hot wing platter', 'salad bar'],
+      'Hawaiian Deluxe', 'selection of toppings', 'garlic bread', 'hot wing platter', 'salad bar'],
     American: ['double bacon cheeseburger', 'fish n chips', 'homemade black bean chili', 'rare ahi salad',
       'garlic aioli', 'selection of beers on tap', 'new york sirloin', 'basket of curly fries', 'onion ring tower',
       'bone marrow appetizer'],
