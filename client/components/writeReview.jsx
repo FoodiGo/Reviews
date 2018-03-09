@@ -71,6 +71,13 @@ class WriteReview extends React.Component {
       };
 
       helpers.post(`/restaurants/${this.props.restId}/reviews`, request, updatePage);
+
+      this.setState({
+        starsClicked: false,
+        starsClickedNum: 0,
+        starsHovered: 0,
+        startReview: false,
+      });
     }
   }
 
