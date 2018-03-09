@@ -15,6 +15,7 @@
   border-width: 1px; 
   border-color: #fff;
   border-top-color: #eee;
+  min-height: 218px;
 }
 
 .rev_userActions {
@@ -37,6 +38,10 @@
 
 .rev_reviewData {
   flex-basis: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
 }
 
 #rev_write {
