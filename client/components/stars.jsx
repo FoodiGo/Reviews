@@ -27,7 +27,14 @@ const Stars = (props) => {
   return (
     <div className={props.addedClass !== '' ? `rev_starBox ${props.addedClass}` : 'rev_starBox'}>
       {starArray.map((star, index) => (
-        <Star type={star} addedClass={props.addedClass} key={`${props.revId}-star${index}`} />
+        <Star
+          type={star}
+          addedClass={props.addedClass}
+          key={`${props.revId}-star${index}`} // eslint-disable-line
+          handleClick={props.handleClick}
+          handleHover={props.handleHover}
+          handleLeave={props.handleLeave}
+        />
       ))}
     </div>
   );
@@ -37,10 +44,16 @@ Stars.propTypes = {
   rating: propTypes.number.isRequired,
   addedClass: propTypes.string,
   revId: propTypes.string.isRequired,
+  handleClick: propTypes.func,
+  handleHover: propTypes.func,
+  handleLeave: propTypes.func,
 };
 
 Stars.defaultProps = {
   addedClass: '',
+  handleClick: () => (null),
+  handleHover: () => (null),
+  handleLeave: () => (null),
 };
 
 export default Stars;

@@ -11,6 +11,7 @@ const helpers = {
   },
 
   post: (route, request, callback) => {
+    console.log('POST!');
     $.post({
       url: route,
       contentType: 'application/json',

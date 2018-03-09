@@ -19,7 +19,7 @@ router.post('/restaurants/:restaurantId/reviews', (req, res) => {
       restaurant: req.params.restaurantId,
       restaurantName: req.body.restaurant,
       userName: req.body.user || 'anonymous',
-      userPhoto: req.body.photo || '',
+      userPhoto: req.body.photo || 'https://s3-us-west-1.amazonaws.com/foodigouserphotos/DefaultUser.png',
       userLocation: req.body.location || 'San Francisco, CA',
       rating: req.body.rating,
       date: new Date(),

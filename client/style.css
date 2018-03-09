@@ -72,11 +72,6 @@
   width: 20px;
 }
 
-.rev_writeStar.rev_star:hover {
-  background-color: #EF5D53;
-}
-
-
 .rev_greyStar {
   background-color: #CCCCCC;
 }
@@ -243,4 +238,8 @@
 
 .rev_specialsNum {
   font-weight: 900;
+}
+
+.rev_hide {
+  display: none;
 }
