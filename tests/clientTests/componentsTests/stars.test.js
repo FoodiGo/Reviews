@@ -14,7 +14,7 @@ describe('Stars container', () => {
     const selectedStars = allStars.find('.rev_selectedStar');
     const greyStars = allStars.find('.rev_greyStar');
 
-    expect(selectedStars.length).toBe(3);
-    expect(greyStars.length).toBe(2);
+    expect(selectedStars.length).toBe(6);
+    expect(greyStars.length).toBe(4);
   });
 });
