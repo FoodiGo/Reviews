@@ -28,6 +28,7 @@ class WriteReview extends React.Component {
     num = Number(num) + 1;
     this.setState({
       starsClicked: true,
+      startReview: true,
       starsClickedNum: num,
     });
   }
@@ -48,16 +49,21 @@ class WriteReview extends React.Component {
   }
 
   handleCancelClick() {
-    this.setState({ startReview: false });
+    this.setState({
+      startReview: false,
+      starsClicked: false,
+      starsClickedNum: 0,
+    });
   }
 
   handleSubmit() {
-    if (this.state.starsClicked) {
+    const reviewBody = document.getElementById('rev_input').value;
+    if (this.state.starsClicked && reviewBody) {
       const request = {
         restaurantId: this.props.restId,
         restaurant: this.props.restaurant,
         rating: this.state.starsClickedNum,
-        review: document.getElementById('rev_input').value,
+        review: reviewBody,
       };
 
       const updatePage = () => {
@@ -74,10 +80,34 @@ class WriteReview extends React.Component {
         <User addedClass="rev_currUser" />
         <div id="rev_writeBox">
           <div
-            id="rev_clickStars"
-            className={this.state.startReview && !this.state.starsClicked ? null : 'rev_hide'}
+            className={this.state.startReview && !this.state.starsClicked ? 'rev_clickStars' : 'rev_hide rev_clickStars'}
           >
           Select your rating
+          </div>
+          <div
+            className={this.state.startReview && this.state.starsClickedNum === 1 ? 'rev_clickStars' : 'rev_hide rev_clickStars'}
+          >
+          Eek! Methinks not.
+          </div>
+          <div
+            className={this.state.startReview && this.state.starsClickedNum === 2 ? 'rev_clickStars' : 'rev_hide rev_clickStars'}
+          >
+          Meh. I've experienced better.
+          </div>
+          <div
+            className={this.state.startReview && this.state.starsClickedNum === 3 ? 'rev_clickStars' : 'rev_hide rev_clickStars'}
+          >
+          A-OK.
+          </div>
+          <div
+            className={this.state.startReview && this.state.starsClickedNum === 4 ? 'rev_clickStars' : 'rev_hide rev_clickStars'}
+          >
+          Yay! I'm a fan.
+          </div>
+          <div
+            className={this.state.startReview && this.state.starsClickedNum === 5 ? 'rev_clickStars' : 'rev_hide rev_clickStars'}
+          >
+          Woohoo! As good as it gets!
           </div>
           <Stars
             rating={this.state.starsClicked && this.state.starsHovered === 0 ? this.state.starsClickedNum : this.state.starsHovered} // eslint-disable-line
