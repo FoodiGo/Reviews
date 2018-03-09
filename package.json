@@ -12,7 +12,8 @@
     "test": "NODE_ENV=MONGOTEST jest",
     "dev": "./node_modules/.bin/webpack -d --watch",
     "prod": "./node_modules/.bin/webpack -p",
-    "start": "NODE_ENV=MONGO nodemon server/serverIndex.js",
+    "start": "NODE_ENV=MONGO node server/serverIndex.js",
+    "start-dev": "NODE_ENV=MONGO nodemon server/serverIndex.js",
     "seed-db": "node database/seedDB.js"
   },
   "repository": {
