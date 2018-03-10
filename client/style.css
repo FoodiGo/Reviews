@@ -15,7 +15,7 @@
   border-width: 1px; 
   border-color: #fff;
   border-top-color: #eee;
-  min-height: 218px;
+  min-height: 285px;
 }
 
 .rev_userActions {
@@ -187,6 +187,7 @@
   border-width: 1px; 
   border-color: #fff;
   border-bottom-color: #eee;
+  width: 100%;
 }
 
 .rev_lastAction {
